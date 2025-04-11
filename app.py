@@ -38,7 +38,7 @@ if submitted:
     }
 
     try:
-        response = requests.post("http://localhost:8000/predict", json=data)
+        response = requests.post("https://strokeml.onrender.com/predict", json=data)
         if response.status_code == 200:
             prediction = response.json()["prediction"]
             st.success(f"🩺 Prediction: {prediction}")
